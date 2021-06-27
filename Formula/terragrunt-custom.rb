@@ -1,4 +1,4 @@
-class Terragrunt < Formula
+class TerragruntCustom < Formula
   desc "Thin wrapper for Terraform e.g. for locking state"
   homepage "https://terragrunt.gruntwork.io/"
   url "https://github.com/gruntwork-io/terragrunt/archive/v0.31.0.tar.gz"
