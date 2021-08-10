@@ -6,7 +6,6 @@ class NcspotCustom < Formula
   license "BSD-2-Clause"
 
   depends_on "python@3.9" => :build
-  depends_on "alsa-lib" => :build
   depends_on "rust" => :build
 
   def install
@@ -14,7 +13,7 @@ class NcspotCustom < Formula
     system "cargo", "install",
            "--no-default-features",
            "--features",
-           "rodio_backend,cursive/pancurses-backend,cover,notify,alsa_backend",
+           "rodio_backend,cursive/pancurses-backend,cover,notify",
            *std_cargo_args
   end
   test do
