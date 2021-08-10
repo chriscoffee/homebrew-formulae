@@ -5,8 +5,8 @@ class NcspotCustom < Formula
   sha256 "6d08ae339dc1b1fb1e472490e0d672840030467158a5a1f7472b588e2de303fe"
   license "BSD-2-Clause"
 
-  depends_on "portaudio" => :build
   depends_on "python@3.9" => :build
+  depends_on "alsa-lib" => :build
   depends_on "rust" => :build
 
   def install
@@ -14,7 +14,7 @@ class NcspotCustom < Formula
     system "cargo", "install",
            "--no-default-features",
            "--features",
-           "portaudio_backend,cursive/pancurses-backend,cover,notify",
+           "rodio_backend,cursive/pancurses-backend,cover,notify,alsa_backend",
            *std_cargo_args
   end
   test do
